@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- story: time path
+  steps:
+  - intent: give_time
+  - action: action_show_time
+
+- story: action path
+  steps:
+  - intent: Travel
+    entities:
+    - place
+  - action: utter_travel
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: action path wrong
+  steps:
+  - intent: Travel
+    entities:
+    - place
+  - action: utter_travel
+  - intent: deny
+  - action: utter_sorry
+  
+- story: current path
+  steps:
+  - intent: current_place
+  - action: utter_current_place
+  - intent: deny
+  - action: utter_sorry
+  
+- story: bot info
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- story: Unknown path
+  steps:
+  - intent: general_question
+  - action: utter_dontknow
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: Unknown path wrong
+  steps:
+  - intent: general_question
+  - action: utter_dontknow
+  - intent: deny
+  - action: utter_sorry
