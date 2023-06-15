@@ -1,0 +1,200 @@
+
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - hey dude
+    - good morning
+    - good evening
+    - good afternoon
+    - greetings
+    - hello
+    - namaskar
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya
+    - going out
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - bad
+    - not good
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot
+    - am I talking to a human?
+    - what is your name?
+    - Who are you?
+    - who am i talking to
+
+- intent: command
+  examples: |
+    - take me to [IITMIC](place)
+    - Take me to [park](place)
+    - I would like to see [CBEEV](place)
+    - I would like to see [MSB](place)
+    - Can we go to [5G lab](place)
+    - Can we see [IITM](place)
+    - Would like to go [First Floor](place)
+    - Go to [Ground Floor](place)
+    - Take me [somewhere](place)
+    - Lets go to [cabin](place)
+    - go to [CEET](place)
+    - go [somewhere](place)
+    - Lets go to the [park](place)
+    - I am heading to the [IC](place)
+    - We should go to the [CBEEV](place)
+    - Im going to the [Gate](place)
+    - Why dont we go to the [Incubation Cell](place)?
+    - Shall we go to the [room](place)?
+    - Lets take a trip to the [E3-03](place).
+    - Going to the [bathroom](place) sounds like a great idea.
+    - im off to the [restroom](place).
+    - lets visit the [Research Park](place)
+    - take me to the [incubation cell](place)
+    - Take me to [Build Club](place)
+    - take me to [Thalaiver Lounge](place)
+    - Take me to a [washroom](place)
+    - Take me to a [Research Park](place)
+    
+- intent: current_place
+  examples: |
+    - where am I now
+    - what is this place
+    - where are we
+    - where am i
+    - which area is this?
+    - what place is this?
+    - What place are we in?
+    
+- intent: info_questions
+  examples: |
+    - What is IITMRP
+    - what does IITMRP does
+    - what is the focus of IITMRP
+    - How many Research people are in IIT Madras
+    - What is the area of Research Park
+    - Number of professionals in the campus
+    - What is the nature of IIT Madras Research Park as a company?
+    - Who promoted and conceived the idea of IIT Madras Research Park?
+    - What is the goal of IIT Madras Research Park?
+    - What is the role of state-of-the-art technology at Research Park?
+    - How does IIT Madras Research Park foster partnerships?
+    - Can you provide examples of successful collaborations or ventures at research park?
+    - How many R & D firms are present?
+    - How old is the research park?
+    - when did this research park started?
+    - How large is this place?
+    - How many companies are here?
+    - Which are the social media platforms for IITMRP?
+    - How does the Research Park support innovation and collaboration among its tenants?
+    - Are there any specialized facilities or laboratories available for use within the Research Park?
+    - what are the centre of excellences
+    - what is CUBE
+    - what is CBEEV
+    - What is AMTDC
+    - What does the Centres of Excellence do?
+    - How many centre of excellences are there?
+    - What are the areas of focus for CBEEV?
+    - How does CBEEV study the impact of partial charge-discharge cycles on battery life?
+    - Is there anything that works for wireless technology?
+    - Is there anything that works for Urbanisation and buildings?
+    - is there anything that specifically works for health and technology?
+    - What are the Centres of Excellence at Research Park. Name a few please?
+    - What is IC
+    - What does Incubation Cell do
+    - What is the purpose of the IIT Madras Incubation Cell? 
+    - What kind of ventures does the IITMIC seek to nurture?
+    - How does the IC support entrepreneurs during their start-up phase?
+    - What resources does the IIT Madras Incubation Cell provide to start-ups?
+    - What types of support services are available to entrepreneurs through the IC?
+    - What is the role of mentoring in the IC's support system?
+    - What training programs are offered by the IIT Madras Incubation Cell?
+    - Does the IITMIC provide seed funds to start-ups?
+    - What is the scope of support offered by the IIT Madras Incubation Cell?
+    - Can external start-ups associated with IIT Madras members receive support from the IITMIC?
+    - How does the IITMIC help start-ups scale up their ventures?
+    - Are collaborations with external organizations encouraged by the IIT Madras Incubation Cell?
+    - What is the significance of technology and knowledge-based ventures for the IITMIC?
+    - How does the IIT Madras Incubation Cell contribute to the competitive market?
+    - What role does IIT Madras play in the development of technologies/IP supported by the IITMIC?
+    - Who is the founder of IITMRP
+    - Who is the president of IITMRP
+    - Tell me about ashok sir
+    - Who is prof ashok
+    - What are the technology contributions made by Dr. Ashok Jhunjhunwala?
+    - How have Dr. Ashok Jhunjhunwala's contributions impacted the lives of people?
+    - How has Dr. Ashok Jhunjhunwala contributed to driving India's startup revolution?
+    - How many deep-tech companies has Dr. Ashok Jhunjhunwala incubated?
+    - What is the impact of the deep-tech companies incubated by Dr. Ashok Jhunjhunwala?
+    - How has Dr. Ashok Jhunjhunwala fostered innovation and entrepreneurship in India and the region?
+    - Can you provide specific examples of successful deep-tech companies incubated by Dr. Ashok Jhunjhunwala?
+    - Where can I find more details about your start-ups?
+    - Are there any mentorship programs for startups?
+    - How do you assist startups in accessing funding or investment opportunities? 
+    - Are there any funding assistance for startups?
+    - How are startups assessed
+    - How do start-ups apply to this place for incubation?
+    - Is IITM RP suitable only for technical related companies? 
+    - what is the rent for a workspace here?
+    - Can anyone join here with their startup?
+    - What is the basic procedure to set up a startup here?
+    - How many companies are there in IITMRP?
+    - How is the weather?
+    - How to make this recipe?
+    - How does humans react?
+    - Why is this wall white?
+    - Why there are so may people?
+    - who is not the founder
+    - How are you
+
+    
+#- intent: give_time
+#  examples: |
+#    - what is the time now?
+#    - What is the time
+#    - say the time
+#    - do you know the time now
+#    - time please
+#    - What is the current time?
+#    - What is the time on the clock?
+#    - whats the time now

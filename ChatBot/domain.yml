@@ -1,0 +1,62 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+#  - give_time
+  - command
+  - current_place
+  - info_questions
+  
+entities:
+  - place
+  
+slots:
+    place:
+      type: text
+      mappings:
+      - type: from_entity
+        entity: place
+
+actions:
+- action_default_fallback
+#- action_show_time
+- action_context_answering
+
+responses:
+  utter_greet:
+  - text: "Hey! What can i do for you?"
+
+#  utter_cheer_up:
+#  - text: "Here is something to cheer you up:"
+#    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_sorry:
+  - text: "Sorry, I couldn't help you."
+  
+  
+  utter_iamabot:
+  - text: "I am a bot, dropped down by god himself."
+  
+  utter_travel:
+  - text: Taking you to {place}.
+  
+  utter_current_place:
+  - text: Sorry, I don't know. But we are inside IITMRP.
+  
+  utter_default:
+  - text: "I'm sorry, I didn't understand. Can you please rephrase or provide more information?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

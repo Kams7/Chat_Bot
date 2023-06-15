@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- story: deny path
+  steps:
+  - intent: deny
+  - action: utter_sorry
+  
+- story: Query path
+  steps:
+  - intent: info_questions
+  - action: action_context_answering
+
+- story: command path
+  steps:
+  - intent: command
+    entities:
+    - place
+  - action: utter_travel
+  
+- story: current path
+  steps:
+  - intent: current_place
+  - action: utter_current_place
+  
+- story: bot info
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+
+#- story: time path
+#  steps:
+#  - intent: give_time
+#  - action: action_show_time
