@@ -18,7 +18,7 @@ from langchain import PromptTemplate, LLMChain
 
 #database
 
-PINECONE_API_TOKEN = "2e8b2b4d-ed0a-4522-b645-f64bd25cffca"
+PINECONE_API_TOKEN = "ENTER_YOUR_API_KEY"
 pinecone.init(
     api_key= PINECONE_API_TOKEN,
     environment="asia-southeast1-gcp-free"
@@ -34,7 +34,7 @@ index = pinecone.Index(index_name)
 
 #Falcon model
 
-HUGGINGFACE_API_TOKEN = "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"
+HUGGINGFACE_API_TOKEN = "ENTER_YOUR_API_KEY"
 os.environ["HUGGINGFACE_API_TOKEN"] = HUGGINGFACE_API_TOKEN
 
 repo_id = "tiiuae/falcon-7b-instruct"
